@@ -1,137 +1,217 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  
-  <!-- 🔮 SEO Optimized Title -->
-  <title>🔮 Panja Pakshi Sastra Online | Free Nakshatra Bird Finder</title>
-
-  <!-- ✅ Meta Description & Keywords for Search Engines -->
-  <meta name="description" content="Find your Panja Pakshi bird based on your Nakshatra and check its daily timetable (Ruling, Eating, Walking, Sleeping, Dying). 100% Free Online Panja Pakshi Sastra Tool with Tamil Names.">
-  <meta name="keywords" content="Panja Pakshi Sastra, Panchapakshi Sastra, Nakshatra bird finder, Tamil astrology, Panja pakshi calculator, Free online pakshi tool, Panchapakshi calculator, Vedic astrology birds">
-  <meta name="author" content="Harish">
-
-  <style>
-    body { font-family: Arial, sans-serif; background:#f3f6fa; text-align:center; padding:30px; }
-    #chatbox { width:95%; max-width:650px; margin:auto; background:white; padding:20px; border-radius:15px; box-shadow:0px 0px 12px rgba(0,0,0,0.2); }
-    select, button { padding:12px; margin:10px; border-radius:8px; border:1px solid #ccc; font-size:16px; width:90%; max-width:400px; }
-    button { background:#4CAF50; color:white; cursor:pointer; }
-    button:hover { background:#45a049; }
-    .reply { margin-top:20px; font-size:16px; color:#333; text-align:left; }
-    table { width:100%; border-collapse:collapse; margin-top:10px; }
-    th, td { border:1px solid #ccc; padding:8px; text-align:center; font-size:14px; }
-    th { background:#f2f2f2; }
-    .highlight { background:#d4edda; font-weight:bold; }
-  </style>
+<meta charset="UTF-8">
+<title>🕊️ Pancha Pakshi Calculator</title>
+<style>
+  body {
+    font-family: "Segoe UI", Tahoma, sans-serif;
+    background: linear-gradient(to right, #eef2f3, #dfe9f3);
+    margin: 0; padding: 20px; color: #222;
+  }
+  h2, h3 { text-align: center; }
+  .container {
+    max-width: 1000px; margin: auto; background: #fff;
+    padding: 20px; border-radius: 12px; box-shadow: 0 4px 15px rgba(0,0,0,0.1);
+  }
+  label { font-weight: bold; margin-right: 10px; }
+  select, button {
+    padding: 8px 12px; margin: 8px; border-radius: 8px; border: 1px solid #ccc;
+    font-size: 14px;
+  }
+  button {
+    background: #4CAF50; color: white; cursor: pointer;
+    transition: 0.3s;
+  }
+  button:hover { background: #45a049; }
+  table {
+    width: 100%; border-collapse: collapse; margin: 10px 0;
+  }
+  th, td {
+    border: 1px solid #ccc; padding: 8px; text-align: center;
+  }
+  th { background: #f4f4f4; }
+  .highlight { background: #ffd966; font-weight: bold; }
+  .summary {
+    padding: 12px; border-radius: 10px; margin: 10px 0; color: #fff;
+  }
+  .today { background: #4CAF50; }
+  .tomorrow { background: #2196F3; }
+  .reply, .advice {
+    margin-top: 15px; padding: 15px; border-radius: 10px;
+    border: 1px solid #ccc; background: #fafafa;
+  }
+</style>
 </head>
 <body>
-  <div id="chatbox">
-    <h1>🔮 Panja Pakshi Sastra Online</h1>
-    <p>Find your Panja Pakshi bird & daily timetable based on your Nakshatra — 100% Free</p>
-    
-    <!-- Nakshatra Selector -->
-    <select id="nakshatra">
-      <option value="">-- Select Nakshatra --</option>
-      <option value="ashwini">Ashwini (அஸ்வினி)</option>
-      <option value="bharani">Bharani (பரணி)</option>
-      <option value="krittika">Krittika (கிருத்திகை)</option>
-      <option value="rohini">Rohini (ரோகிணி)</option>
-      <option value="mrigashira">Mrigashirsha (மிருகசீரிடம்)</option>
-      <option value="ardra">Ardra (திருவாதிரை)</option>
-      <option value="punarvasu">Punarvasu (புனர்பூசம்)</option>
-      <option value="pushya">Pushya (பூசம்)</option>
-      <option value="ashlesha">Ashlesha (ஆயில்யம்)</option>
-      <option value="magha">Magha (மகம்)</option>
-      <option value="purva phalguni">Purva Phalguni (பூரம்)</option>
-      <option value="uttara phalguni">Uttara Phalguni (உத்திரம்)</option>
-      <option value="hasta">Hasta (அத்தம்)</option>
-      <option value="chitra">Chitra (சித்திரை)</option>
-      <option value="swati">Swati (சுவாதி)</option>
-      <option value="vishaka">Vishakha (விசாகம்)</option>
-      <option value="anuradha">Anuradha (அனுஷம்)</option>
-      <option value="jyeshtha">Jyeshtha (கேட்டை)</option>
-      <option value="moola">Mula (மூலம்)</option>
-      <option value="purva ashadha">Purva Ashadha (பூராடம்)</option>
-      <option value="uttara ashadha">Uttara Ashadha (உத்திராடம்)</option>
-      <option value="shravana">Shravana (திருவோணம்)</option>
-      <option value="dhanishta">Dhanishta (அவிட்டம்)</option>
-      <option value="shatabhisha">Shatabhisha (சதயம்)</option>
-      <option value="purva bhadrapada">Purva Bhadrapada (பூரட்டாதி)</option>
-      <option value="uttara bhadrapada">Uttara Bhadrapada (உத்திரட்டாதி)</option>
-      <option value="revati">Revati (ரேவதி)</option>
-    </select>
-    
-    <br>
-    <button onclick="findPakshi()">Find My Pakshi</button>
-    <div id="result" class="reply"></div>
-  </div>
+<div class="container">
+  <h2>🕊️ Pancha Pakshi Calculator</h2>
 
-  <script>
-    // Nakshatra -> Bird mapping
-    let pakshiMap = {
-      "ashwini": "Crow","bharani": "Crow","krittika": "Peacock","rohini": "Owl",
-      "mrigashira": "Cock","ardra": "Vulture","punarvasu": "Crow","pushya": "Owl",
-      "ashlesha": "Peacock","magha": "Peacock","purva phalguni": "Vulture","uttara phalguni": "Crow",
-      "hasta": "Vulture","chitra": "Cock","swati": "Owl","vishaka": "Peacock",
-      "anuradha": "Cock","jyeshtha": "Crow","moola": "Peacock","purva ashadha": "Owl",
-      "uttara ashadha": "Vulture","shravana": "Vulture","dhanishta": "Cock","shatabhisha": "Owl",
-      "purva bhadrapada": "Peacock","uttara bhadrapada": "Vulture","revati": "Owl"
-    };
+  <label>🌙 Moon Phase:</label>
+  <select id="moonPhase">
+    <option value="">--Select--</option>
+    <option value="valarpirai">🌙 Valarpirai (வளர்பிறை)</option>
+    <option value="theipirai">🌑 Theipirai (தேய்பிறை)</option>
+  </select>
 
-    // Bird Cycle
-    let cycle = {
-      "Crow":    ["Ruling","Eating","Walking","Sleeping","Dying"],
-      "Owl":     ["Eating","Walking","Sleeping","Dying","Ruling"],
-      "Cock":    ["Walking","Sleeping","Dying","Ruling","Eating"],
-      "Peacock": ["Sleeping","Dying","Ruling","Eating","Walking"],
-      "Vulture": ["Dying","Ruling","Eating","Walking","Sleeping"]
-    };
+  <label>⭐ Your Nakshatra:</label>
+  <select id="nakshatra">
+    <option value="">--Select--</option>
+    <option>Ashwini</option><option>Bharani</option><option>Karthigai</option>
+    <option>Rohini</option><option>Mrigashirsha</option><option>Thiruvathirai</option>
+    <option>Punarpoosam</option><option>Poosam</option><option>Aayilyam</option>
+    <option>Magam</option><option>Pooram</option><option>Uthiram</option>
+    <option>Hastham</option><option>Chithirai</option><option>Swaathi</option>
+    <option>Visakam</option><option>Anusham</option><option>Kettai</option>
+    <option>Moolam</option><option>Pooradam</option><option>Uthiradam</option>
+    <option>Thiruvonam</option><option>Avittam</option><option>Sathayam</option>
+    <option>Poorattadhi</option><option>Uthirattadhi</option><option>Revathi</option>
+  </select>
+  <br><br>
 
-    // Tamil Names
-    let birdTamil = { "Crow":"காகம்","Owl":"ஆந்தை","Cock":"சேவல்","Peacock":"மயில்","Vulture":"கழுகு" };
-    let stateTamil = { "Ruling":"ஆட்சி","Eating":"உணவு","Walking":"நடப்பு","Sleeping":"நித்ரை","Dying":"மரணம்" };
+  <button onclick="showBirdSchedule()">🔮 Show My Bird & Timetable</button>
 
-    // Format time
-    function fmt(date){ return date.toLocaleTimeString([], {hour:"2-digit", minute:"2-digit"}); }
+  <div id="result" class="reply"></div>
 
-    function findPakshi(){
-      let nakshatra = document.getElementById("nakshatra").value;
-      if (!nakshatra){ document.getElementById("result").innerText="❌ Please select a Nakshatra."; return; }
+  <hr>
+  <h3>💞 Compatibility Check</h3>
+  <label>Partner Nakshatra:</label>
+  <select id="partnerNakshatra">
+    <option value="">--Select--</option>
+    <option>Ashwini</option><option>Bharani</option><option>Karthigai</option>
+    <option>Rohini</option><option>Mrigashirsha</option><option>Thiruvathirai</option>
+    <option>Punarpoosam</option><option>Poosam</option><option>Aayilyam</option>
+    <option>Magam</option><option>Pooram</option><option>Uthiram</option>
+    <option>Hastham</option><option>Chithirai</option><option>Swaathi</option>
+    <option>Visakam</option><option>Anusham</option><option>Kettai</option>
+    <option>Moolam</option><option>Pooradam</option><option>Uthiradam</option>
+    <option>Thiruvonam</option><option>Avittam</option><option>Sathayam</option>
+    <option>Poorattadhi</option><option>Uthirattadhi</option><option>Revathi</option>
+  </select>
+  <label>Moon Phase:</label>
+  <select id="partnerPhase">
+    <option value="">--Select--</option>
+    <option value="valarpirai">🌙 Valarpirai (வளர்பிறை)</option>
+    <option value="theipirai">🌑 Theipirai (தேய்பிறை)</option>
+  </select>
+  <br><br>
+  <button onclick="checkCompatibility()">💞 Check Compatibility</button>
 
-      let bird = pakshiMap[nakshatra];
-      let now = new Date();
+  <div id="compatResult" class="advice"></div>
+</div>
 
-      // Assume sunrise 6 AM and sunset 6 PM
-      let sunrise = new Date(now); sunrise.setHours(6,0,0,0);
-      let sunset = new Date(now); sunset.setHours(18,0,0,0);
+<script>
+// Bird mapping for Valarpirai (Shukla Paksha)
+const pakshiMapValarpirai = {
+  "Ashwini":"Vulture","Bharani":"Crow","Karthigai":"Cock","Rohini":"Owl","Mrigashirsha":"Peacock",
+  "Thiruvathirai":"Cock","Punarpoosam":"Owl","Poosam":"Crow","Aayilyam":"Peacock","Magam":"Vulture",
+  "Pooram":"Vulture","Uthiram":"Crow","Hastham":"Peacock","Chithirai":"Owl","Swaathi":"Cock",
+  "Visakam":"Crow","Anusham":"Peacock","Kettai":"Owl","Moolam":"Vulture","Pooradam":"Cock",
+  "Uthiradam":"Owl","Thiruvonam":"Peacock","Avittam":"Crow","Sathayam":"Vulture",
+  "Poorattadhi":"Cock","Uthirattadhi":"Owl","Revathi":"Crow"
+};
 
-      let dayDur = (sunset - sunrise)/5;
-      let nightDur = (24*60*60*1000 - (sunset - sunrise))/5;
+// Bird mapping for Theipirai (Krishna Paksha)
+const pakshiMapTheipirai = {
+  "Ashwini":"Crow","Bharani":"Cock","Karthigai":"Owl","Rohini":"Peacock","Mrigashirsha":"Vulture",
+  "Thiruvathirai":"Cock","Punarpoosam":"Peacock","Poosam":"Owl","Aayilyam":"Crow","Magam":"Cock",
+  "Pooram":"Vulture","Uthiram":"Peacock","Hastham":"Crow","Chithirai":"Cock","Swaathi":"Owl",
+  "Visakam":"Vulture","Anusham":"Crow","Kettai":"Cock","Moolam":"Owl","Pooradam":"Peacock",
+  "Uthiradam":"Vulture","Thiruvonam":"Cock","Avittam":"Owl","Sathayam":"Crow",
+  "Poorattadhi":"Vulture","Uthirattadhi":"Peacock","Revathi":"Owl"
+};
 
-      let resultHTML = `<b>🕊️ Bird:</b> ${bird} (${birdTamil[bird]})<br>`;
-      
-      // Daytime chart
-      resultHTML += "<h3>📅 Daytime Timetable</h3><table><tr><th>Time</th><th>State</th></tr>";
-      for (let i=0;i<5;i++){
-        let start=new Date(sunrise.getTime()+i*dayDur);
-        let end=new Date(sunrise.getTime()+(i+1)*dayDur);
-        let state=cycle[bird][i];
-        let highlight=(now>=start && now<end)?"highlight":""; 
-        resultHTML += `<tr class='${highlight}'><td>${fmt(start)} - ${fmt(end)}</td><td>${state} (${stateTamil[state]})</td></tr>`;
-      }
-      resultHTML+="</table><h3>🌙 Nighttime Timetable</h3><table><tr><th>Time</th><th>State</th></tr>";
-      for (let i=0;i<5;i++){
-        let start=new Date(sunset.getTime()+i*nightDur);
-        let end=new Date(sunset.getTime()+(i+1)*nightDur);
-        let state=cycle[bird][i];
-        let highlight=(now>=start && now<end)?"highlight":""; 
-        resultHTML += `<tr class='${highlight}'><td>${fmt(start)} - ${fmt(end)}</td><td>${state} (${stateTamil[state]})</td></tr>`;
-      }
-      resultHTML+="</table>";
+const birdTamil = {
+  "Cock":"கோழி", "Owl":"ஆந்தை", "Vulture":"கழுகு",
+  "Crow":"காக்கை", "Peacock":"மயில்"
+};
 
-      document.getElementById("result").innerHTML=resultHTML;
+const cycle = {
+  "Cock":["Sleeping","Ruling","Walking","Eating","Dying"],
+  "Owl":["Eating","Sleeping","Ruling","Walking","Dying"],
+  "Vulture":["Walking","Eating","Sleeping","Ruling","Dying"],
+  "Crow":["Ruling","Walking","Eating","Sleeping","Dying"],
+  "Peacock":["Dying","Ruling","Walking","Eating","Sleeping"]
+};
+
+const stateTamil = {
+  "Sleeping":"தூக்கம்", "Ruling":"ஆட்சி", "Walking":"நடப்பது",
+  "Eating":"உண்ணுதல்", "Dying":"மரணம்"
+};
+
+const compatibility = {
+  "Cock":{"Cock":"Good","Owl":"Neutral","Vulture":"Bad","Crow":"Good","Peacock":"Neutral"},
+  "Owl":{"Cock":"Neutral","Owl":"Good","Vulture":"Neutral","Crow":"Bad","Peacock":"Good"},
+  "Vulture":{"Cock":"Bad","Owl":"Neutral","Vulture":"Good","Crow":"Neutral","Peacock":"Bad"},
+  "Crow":{"Cock":"Good","Owl":"Bad","Vulture":"Neutral","Crow":"Good","Peacock":"Neutral"},
+  "Peacock":{"Cock":"Neutral","Owl":"Good","Vulture":"Bad","Crow":"Neutral","Peacock":"Good"}
+};
+
+function getBird(nak,phase){
+  if(phase=="valarpirai") return pakshiMapValarpirai[nak];
+  if(phase=="theipirai") return pakshiMapTheipirai[nak];
+  return null;
+}
+
+function fmt(d){ return d.toTimeString().slice(0,5); }
+
+function showBirdSchedule(){
+  let nak = document.getElementById("nakshatra").value;
+  let phase = document.getElementById("moonPhase").value;
+  if(!nak || !phase){ alert("Select Nakshatra & Moon Phase"); return; }
+
+  let yourBird = getBird(nak,phase);
+  let now = new Date();
+  let schedules = "";
+
+  ["Today","Tomorrow"].forEach((dayLabel,idx)=>{
+    let baseDate=new Date(); baseDate.setDate(now.getDate()+idx);
+    let sunrise=new Date(baseDate); sunrise.setHours(6,0,0,0);
+    let sunset=new Date(baseDate); sunset.setHours(18,0,0,0);
+    let dayDur=(sunset-sunrise)/5, nightDur=(24*60*60*1000-(sunset-sunrise))/5;
+
+    schedules+=`<div class="summary ${idx==0?'today':'tomorrow'}">
+      <b>${dayLabel}:</b> Your bird is ${yourBird} (${birdTamil[yourBird]})
+    </div>`;
+    schedules+=`<h3>${dayLabel} Daytime</h3><table><tr><th>Time</th><th>State</th></tr>`;
+    for(let i=0;i<5;i++){
+      let start=new Date(sunrise.getTime()+i*dayDur), end=new Date(sunrise.getTime()+(i+1)*dayDur);
+      let state=cycle[yourBird][i], highlight=(now>=start&&now<end&&idx==0)?"highlight":"";
+      schedules+=`<tr class="${highlight}"><td>${fmt(start)}-${fmt(end)}</td><td>${state} (${stateTamil[state]})</td></tr>`;
     }
-  </script>
+    schedules+="</table><h3>"+dayLabel+" Nighttime</h3><table><tr><th>Time</th><th>State</th></tr>";
+    for(let i=0;i<5;i++){
+      let start=new Date(sunset.getTime()+i*nightDur), end=new Date(sunset.getTime()+(i+1)*nightDur);
+      let state=cycle[yourBird][i], highlight=(now>=start&&now<end&&idx==0)?"highlight":"";
+      schedules+=`<tr class="${highlight}"><td>${fmt(start)}-${fmt(end)}</td><td>${state} (${stateTamil[state]})</td></tr>`;
+    }
+    schedules+="</table>";
+  });
+
+  document.getElementById("result").innerHTML=schedules;
+}
+
+function checkCompatibility(){
+  let nak=document.getElementById("nakshatra").value;
+  let phase=document.getElementById("moonPhase").value;
+  let partnerNak=document.getElementById("partnerNakshatra").value;
+  let partnerPhase=document.getElementById("partnerPhase").value;
+  if(!nak||!phase||!partnerNak||!partnerPhase){ alert("Select both sides fully"); return; }
+
+  let yourBird=getBird(nak,phase);
+  let partnerBird=getBird(partnerNak,partnerPhase);
+  let relation=compatibility[yourBird][partnerBird];
+
+  let adviceMsg="";
+  if(relation=="Good") adviceMsg="✅ Favorable, auspicious for love/marriage.";
+  if(relation=="Neutral") adviceMsg="⚠️ Neutral, okay for friendship, not strong for marriage.";
+  if(relation=="Bad") adviceMsg="❌ Avoid, not auspicious for partnership.";
+
+  document.getElementById("compatResult").innerHTML=
+    `You: ${yourBird} (${birdTamil[yourBird]})<br>
+     Partner: ${partnerBird} (${birdTamil[partnerBird]})<br>
+     Compatibility: <b>${relation}</b><br>${adviceMsg}`;
+}
+</script>
 </body>
 </html>
